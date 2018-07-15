@@ -1,0 +1,23 @@
+{
+    "text":
+        "Hey {{.User.RealName}}, welcome to {{.Team.Name}}!\n\nTo keep stuff running smoothly here, I'll ~be watching your every move~ gladly guide you along! I'd appreciate it if you could have a look at our rules!\n\n*1. Do not cross post messages between channels*\nIf you see someone spam/cross post a message, you can easily report it to me by hovering over the message, click on the \"More actions\" or triple dot button.\n\n*2. Use the appropriate channel*\nWhen in doubt, read the channel topic. If you're still unsure, you can ask what channel is best suited for your message in #hangout.\n\n*3. Do not send direct messages without permission*\nI get it, you need help with your problem asap. But we're all busy and don't like to get interrupted. Besides, more people can help you in the channels. So just ask someone whether you can continue it in private.\n\n*4. Got a burning question? Just ask!*\nWhen we all need to ask the whole channel whether anyone got any experience with A, we'll get nowhere. Immediately what you wanna ask so you can get your answer quicker.\n\n*5. Give us the details!*\nWe cannot telepathically tell what your code looks like, so give us your source code, an example, a screenshot, or even a video!\n\n*6. Use code snippets!*\nIt's hard to read code without proper syntax highlighting. It makes the job easier for us and it doesn't spam the whole channel. Create a code snippet by clicking on the + button to the left of the message field.",
+    "mrkdwn": true,
+    "attachments": [
+        {
+            "text":
+                "Ooh wee! Those were a lot of rules, are you sure you've read them?",
+            "callback_id": "rules",
+            "color": "#02c32d",
+            "attachment_type": "default",
+            "actions": [
+                {
+                    "name": "rules",
+                    "text": "Yes!",
+                    "type": "button",
+                    "value": "yes",
+                    "style": "primary"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    {{if .Reporter}}
+    "text":
+        "A report has been made by <@{{.Reporter}}> regarding a post made by <@{{.Reported}}> in <#{{.Channel.ID}}|{{.Channel.Name}}>",
+    "mrkdwn": true,
+    {{end}}
+    "attachments": [
+        {
+            {{if .HasSeen}}
+                {{if .Removed}}
+                    "text": "<@{{.Reported}}> said the crossposts were removed.",
+                {{else}}
+                    "text": "<@{{.Reported}}> said the report was invalid.",
+                {{end}}
+            {{else}}
+                "text": "Waiting for a response from <@{{.Reported}}>...",
+            {{end}}
+            "callback_id": "spam_update",
+            "color": "#02c32d",
+            "attachment_type": "default"
+        }
+    ]
+}

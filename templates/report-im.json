@@ -1,0 +1,30 @@
+{
+    "text":
+        "I have received a report regarding a post you made in <#{{.Channel.ID}}|{{.Channel.Name}}>. Please remove your crosspost(s) from all of the channels where you posted it.\n\nCheck the rules by typing `/rules`.",
+    "mrkdwn": true,
+    "attachments": [
+        {
+            "text":
+                "Have you removed your crosspost(s) or was this report perhaps made in error?",
+            "callback_id": "spam_response",
+            "color": "#02c32d",
+            "attachment_type": "default",
+            "actions": [
+                {
+                    "name": "spam_response",
+                    "text": "Yes, I've removed them!",
+                    "type": "button",
+                    "value": "removed",
+                    "style": "primary"
+                },
+                {
+                    "name": "spam_response",
+                    "text": "No, this report is invalid",
+                    "type": "button",
+                    "value": "invalid",
+                    "style": "danger"
+                }
+            ]
+        }
+    ]
+}
